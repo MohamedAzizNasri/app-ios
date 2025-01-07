@@ -12,7 +12,6 @@ class ForgetPSViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var otpMail: UITextField!
     
     
-    var code :Int!
     var email : String!
     
  
@@ -40,105 +39,101 @@ class ForgetPSViewController: UIViewController, UITextFieldDelegate {
                 }
                 
                 if isValidEmail(emailText) {
-                    let parameters: [String: Any] = [
-                        "email": emailText
-                    ]
                     email = emailText
+                    let parameters: [String: Any] = ["email": emailText]
                     sendForgotPasswordRequest(parameters: parameters)
                 } else {
                     showAlert(message: "Please enter a valid email.")
                 }
             }
             
-            // Helper function to show alerts
-    private func showAlert(message: String) {
-            DispatchQueue.main.async {
-                guard self.isViewLoaded && self.view.window != nil else { return }
-                let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
+            // Fonction pour afficher une alerte
+            private func showAlert(message: String) {
+                DispatchQueue.main.async {
+                    guard self.isViewLoaded && self.view.window != nil else { return }
+                    let alert = UIAlertController(title: "Invalid Input", message: message, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
             }
-        }
             
-            // Validate email format
+            // Fonction pour valider le format de l'email
             private func isValidEmail(_ email: String) -> Bool {
                 let emailPattern = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
                 let emailPred = NSPredicate(format: "SELF MATCHES %@", emailPattern)
                 return emailPred.evaluate(with: email)
             }
             
-            // Send forgot password request
-    private func sendForgotPasswordRequest(parameters: [String: Any]) {
-            guard let url = URL(string: "http://192.168.196.54:3001/auth/forget-password") else { return }
-            
-            do {
-                let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])
+            // Fonction pour envoyer la requête de mot de passe oublié
+            private func sendForgotPasswordRequest(parameters: [String: Any]) {
+                guard let url = URL(string: "http://172.18.1.47:3001/auth/forget-password") else { return }
                 
-                var request = URLRequest(url: url)
-                request.httpMethod = "POST"
-                request.httpBody = jsonData
-                request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-                
-                let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                    if let error = error {
-                        print("Request error:", error)
-                        return
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                    
+                    var request = URLRequest(url: url)
+                    request.httpMethod = "POST"
+                    request.httpBody = jsonData
+                    request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                    
+                    let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                        if let error = error {
+                            print("Request error:", error)
+                            return
+                        }
+                        
+                        guard let data = data, !data.isEmpty else {
+                            print("Response data is missing.")
+                            return
+                        }
+                        
+                        // Imprimer les données de réponse pour débogage
+                        print("Response data:", String(data: data, encoding: .utf8) ?? "No readable data")
+                        
+                        // Gérer la réponse du serveur
+                        self.handleResponse(data: data, response: response)
                     }
                     
-                    guard let data = data, !data.isEmpty else {
-                        print("Response data is missing.")
-                        return
-                    }
+                    // Démarrer la tâche de la requête
+                    task.resume()
                     
-                    // **Print response data for debugging**
-                    print("Response data:", String(data: data, encoding: .utf8) ?? "No readable data")
-                    
-                    // Handle the response from the server
-                    self.handleResponse(data: data)
+                } catch {
+                    print("Error serializing JSON:", error.localizedDescription)
                 }
-                
-                // Start the request task
-                task.resume()
-                
-            } catch {
-                print("Error serializing JSON:", error.localizedDescription)
-            }
-        }
-        
-        // Handles the response from the server
-        private func handleResponse(data: Data) {
-            // **Made `user` optional to handle missing field**
-            struct ForgotPasswordData: Decodable {
-                let code: Int
-                let user: String? // Optional user field
             }
             
-            do {
-                // Decode the JSON response into the ForgotPasswordData struct
-                let responseData = try JSONDecoder().decode(ForgotPasswordData.self, from: data)
-                
-                // Set the OTP code to the `code` variable
-                self.code = responseData.code
-                
-                // Perform segue to the OTP view controller on the main thread
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "otp", sender: (self.email, self.code))
+            // Fonction pour traiter la réponse du serveur
+            private func handleResponse(data: Data, response: URLResponse?) {
+                // Vérification du statut HTTP
+                if let httpResponse = response as? HTTPURLResponse {
+                    if httpResponse.statusCode > 200 {
+                        // La requête a réussi, extraire l'email de la réponse
+                        do {
+                            // Nous supposons que la réponse contient juste un email et un statut
+                            let responseDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                            if let email = responseDict?["email"] as? String {
+                                DispatchQueue.main.async {
+                                    // Passe l'email à la vue suivante
+                                    self.performSegue(withIdentifier: "otp", sender: email)
+                                }
+                            } else {
+                                self.showAlert(message: "Failed to retrieve email from response.")
+                            }
+                        } catch {
+                            print("Error decoding response:", error)
+                        }
+                    } else {
+                        // Affichez un message d'erreur si le statut HTTP n'est pas 200
+                        self.showAlert(message: "Error: \(httpResponse.statusCode). Please try again.")
+                    }
                 }
-            } catch {
-                // If there's an error in decoding, print it to the console
-                print("Error decoding response:", error)
+            }
+            
+            // Préparer le segue pour passer les données à la prochaine vue
+            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+                if segue.identifier == "otp", let email = sender as? String {
+                    let destination = segue.destination as! RecupCodeViewController
+                    destination.email = email // Passer uniquement l'email à la vue suivante
+                }
             }
         }
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "otp", let (email, code) = sender as? (String, Int) {
-                let destination = segue.destination as! RecupCodeViewController
-                destination.email = email
-                destination.otp = code
-            }
-        }
-    struct ForgotPasswordData: Decodable {
-        let code: Int
-        let statusCode: Int
-    }
-    }

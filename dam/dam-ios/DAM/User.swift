@@ -33,7 +33,7 @@ struct User: Identifiable, Codable {
 
 func getUserId(completion: @escaping (String?, Error?) -> Void) {
     // Remplacez par l'URL de votre backend
-    let url = URL(string: "http://192.168.196.54:3001/profile/id")!
+    let url = URL(string: "http://192.168.163.1:3001/profile/id")!
     
     // Créez la requête
     var request = URLRequest(url: url)

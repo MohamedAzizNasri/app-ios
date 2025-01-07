@@ -237,7 +237,7 @@ struct ProfileControllerView: View {
         isLoading = true
         hasError = false
         
-        guard let url = URL(string: "http://192.168.196.54:3001/profile") else {
+        guard let url = URL(string: "http://172.18.1.47:3001/profile") else {
             print("URL invalide.")
             hasError = true
             isLoading = false
@@ -942,7 +942,7 @@ struct PaymentFormView: View {
     // Fonction pour récupérer l'ID de l'utilisateur via une API
     private func getUserId(completion: @escaping (String?, Error?) -> Void) {
         // Remplacez cette partie par un appel réel à votre API pour récupérer l'ID de l'utilisateur
-        let apiUrl = "http://192.168.196.54:3001/profile/id"
+        let apiUrl = "http://172.18.1.47:3001/profile/id"
         guard let url = URL(string: apiUrl) else { return }
         
         var request = URLRequest(url: url)
@@ -1186,7 +1186,7 @@ struct UserIdResponse: Decodable {
 class ProductViewModel: ObservableObject {
     @Published var products: [Product] = []
     func fetchProducts() {
-        guard let url = URL(string: "http://192.168.196.54:3001/product") else { return }
+        guard let url = URL(string: "http://172.18.1.47:3001/product") else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
                 DispatchQueue.main.async {
@@ -1203,9 +1203,10 @@ class ProductViewModel: ObservableObject {
             } }.resume()
         
     } }
+/*
 struct ProductListView: View {
     @StateObject private var viewModel = ProductViewModel()
-    private let baseURL = "http://192.168.196.54:3001"
+    private let baseURL = "http://172.18.1.47:3001"
     @State private var selectedProduct: Product? // Produit sélectionné pour le paiement
     @State private var isPaymentSheetPresented = false // Contrôle de l'affichage de la feuille
 
@@ -1300,10 +1301,10 @@ struct ProductListView: View {
         }
     }
 }
-/*
+*/
  struct ProductListView: View {
      @StateObject private var viewModel = ProductViewModel()
-     private let baseURL = "http://192.168.196.54:3001"
+     private let baseURL = "http://172.18.1.47:3001"
      @State private var selectedProduct: Product? // Produit sélectionné pour le paiement
      @State private var isPaymentSheetPresented = false // Contrôle de l'affichage de la feuille
      @Environment(\.colorScheme) var colorScheme // Détection du mode (sombre ou clair)
@@ -1401,4 +1402,4 @@ struct ProductListView: View {
      }
  }
 
- */
+ 

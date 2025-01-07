@@ -7,7 +7,7 @@
 
 
 
-import SwiftUI
+/*import SwiftUI
 import Speech
 import AVFoundation
 
@@ -65,7 +65,67 @@ struct DoctorAIView: View {
 
     }
 }
+*/
+import SwiftUI
+import Speech
+import AVFoundation
 
+struct DoctorAIView: View {
+    @StateObject private var viewModel = DoctorAIViewModel()
 
+    var body: some View {
+        VStack(spacing: 20) {
+            // Titre principal
+            Text("Docteur IA")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .foregroundColor(.teal)
+            
+            // Zone d'affichage des messages
+            ScrollView {
+                Text(viewModel.message)
+                    .font(.body)
+                    .padding()
+                    .frame(maxWidth: .infinity, minHeight: 200)
+                    .background(Color(.systemGray6))
+                    .cornerRadius(12)
+                    .shadow(radius: 3)
+            }
+            .frame(maxHeight: 300)
+            
+            if viewModel.isLoading {
+                ProgressView("Analyse en cours...")
+                    .progressViewStyle(CircularProgressViewStyle())
+            }
+            
+            Spacer()
+            
+            // Bouton pour activer la reconnaissance vocale
+            Button(action: {
+                viewModel.toggleSpeechRecognition()
+            }) {
+                Image(systemName: viewModel.isListening ? "waveform.circle.fill" : "mic.circle.fill")
+                    .resizable()
+                    .frame(width: 80, height: 80)
+                    .padding()
+                    .foregroundColor(viewModel.isListening ? .red : .blue)
+                    .shadow(radius: 5)
+            }
+            .accessibilityLabel(viewModel.isListening ? "Arrêter l'écoute" : "Démarrer l'écoute")
+            .accessibilityHint(viewModel.isListening ? "Cliquez pour arrêter la reconnaissance vocale" : "Cliquez pour commencer à parler")
+
+            // Texte indicatif
+            Text(viewModel.isListening ? "Parlez, je vous écoute..." : "Appuyez pour poser une question")
+                .font(.footnote)
+                .foregroundColor(.gray)
+                .accessibilityLabel(viewModel.isListening ? "En écoute" : "Prêt à écouter")
+        }
+        .padding()
+        .onAppear {
+            // Demander l'autorisation de reconnaissance vocale au démarrage
+            viewModel.requestSpeechAuthorization(from: UIApplication.shared.windows.first!.rootViewController!)
+        }
+    }
+}
 
 

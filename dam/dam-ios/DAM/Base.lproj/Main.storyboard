@@ -374,7 +374,6 @@
                                 <buttonConfiguration key="configuration" style="gray" title="Continue"/>
                                 <connections>
                                     <action selector="continueAction:" destination="EsL-ks-A1V" eventType="touchUpInside" id="x50-wL-2nO"/>
-                                    <segue destination="Xur-av-KFw" kind="show" identifier="otp" id="zjZ-xg-dq2"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A8f-3s-Khe">
@@ -390,6 +389,7 @@
                     <navigationItem key="navigationItem" id="3wu-fF-umt"/>
                     <connections>
                         <outlet property="otpMail" destination="A8f-3s-Khe" id="IKE-UY-JD2"/>
+                        <segue destination="Xur-av-KFw" kind="show" identifier="otp" id="2hf-33-WSA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PuV-ad-QdH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -494,12 +494,6 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oo3-dF-JB8">
-                                <rect key="frame" x="44" y="574" width="239" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgB-dT-lXX">
                                 <rect key="frame" x="44" y="681" width="284" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -512,7 +506,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password ." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9V-oD-SfI">
-                                <rect key="frame" x="44" y="508" width="239" height="34"/>
+                                <rect key="frame" x="67" y="504" width="239" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oo3-dF-JB8">
+                                <rect key="frame" x="67" y="566" width="239" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -524,6 +524,8 @@
                     <navigationItem key="navigationItem" id="EKB-18-yg3"/>
                     <connections>
                         <outlet property="confirmNewpasswordTF" destination="oo3-dF-JB8" id="F22-So-mwH"/>
+                        <outlet property="newpasswordTF" destination="e9V-oD-SfI" id="Hw9-Rn-e2i"/>
+                        <segue destination="OdT-RW-4ov" kind="show" identifier="vSeg" id="bbJ-Yx-tIF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ho-Ny-Awg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -664,8 +666,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="K84-78-t4S"/>
-        <segue reference="50A-dj-8vh"/>
+        <segue reference="bbJ-Yx-tIF"/>
+        <segue reference="6St-Aa-TJe"/>
         <segue reference="32K-Bq-ZhN"/>
     </inferredMetricsTieBreakers>
     <resources>

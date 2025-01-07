@@ -73,7 +73,7 @@ import Foundation
 }
 */
 class OrderService {
-    private let baseURL = "http://192.168.196.54:3001" // Remplace par l'URL de ton backend
+    private let baseURL = "http://172.18.1.47:3001" // Remplace par l'URL de ton backend
     var isLoading: Bool = false  // Ajout de la variable isLoading
     var errorMessage: String?  // Ajout de la variable errorMessage
 

@@ -51,7 +51,7 @@ class VerifSignViewController: UIViewController {
     
     // Fonction pour envoyer la requête API de vérification
     private func verifyCode(parameters: [String: Any]) {
-        guard let url = URL(string: "http://192.168.196.54:3001/auth/verify-signup") else { return }
+        guard let url = URL(string: "http://172.18.1.47:3001/auth/verify-signup") else { return }
         
         do {
             let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])

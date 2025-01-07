@@ -14,8 +14,8 @@
             filePath = "DAM/ForgetPSViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "ForgetPSViewController"
             landmarkType = "3">
             <Locations>
@@ -316,7 +316,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C"
+            uuid = "0478E15F-9582-4BAC-BC7F-61AE13FD7306"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -325,114 +325,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
-            landmarkName = "ForgetPSViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - 76350bc7a2bf07af"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.email.getter : Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "100">
-               </Location>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - 52ee3895d2a9dabb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.email.setter : Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "136">
-               </Location>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - 995e5c5bf28dea68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.email.modify : Swift.Optional&lt;Swift.String&gt;"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - 2a8c3a10298d4e4d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.email.modify : Swift.Optional&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - b2fd4207dcae46"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; DAM.ForgetPSViewController"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  uuid = "0DCFAC9F-C07A-4843-BEC3-4F0D87DA807C - 474b6576f3d4a05f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "DAM.ForgetPSViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DAM.ForgetPSViewController&gt;"
-                  moduleName = "DAM"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/appleesprit/Downloads/DAM/DAM/ForgetPSViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "112">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0478E15F-9582-4BAC-BC7F-61AE13FD7306"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DAM/ForgetPSViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
             landmarkName = "ForgetPSViewController"
             landmarkType = "3">
             <Locations>
@@ -539,8 +431,8 @@
             filePath = "DAM/ForgetPSViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "ForgetPSViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -549,6 +441,22 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "5F4CF6AB-695D-4434-A13F-C339ACA3812F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DAM/ForgetPSViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6AD9A12A-4764-4ED5-856C-259103617E0C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -564,15 +472,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6AD9A12A-4764-4ED5-856C-259103617E0C"
+            uuid = "B900D950-DD35-490C-9143-C70C8A8F92A5"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DAM/ForgetPSViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -580,7 +488,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B900D950-DD35-490C-9143-C70C8A8F92A5"
+            uuid = "19C32DEA-4A8D-4088-90B9-801E00BA45C7"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -596,15 +504,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "19C32DEA-4A8D-4088-90B9-801E00BA45C7"
+            uuid = "D23AFE4F-258A-4D4C-81D6-3009592F1842"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DAM/ForgetPSViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -612,7 +520,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D23AFE4F-258A-4D4C-81D6-3009592F1842"
+            uuid = "DAB628BF-65F1-4FE4-B2E6-C4F58FC3E6CD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -628,7 +536,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAB628BF-65F1-4FE4-B2E6-C4F58FC3E6CD"
+            uuid = "A7797912-5863-41D5-9B75-33863F418D17"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -637,22 +545,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
             endingLineNumber = "28"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A7797912-5863-41D5-9B75-33863F418D17"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "DAM/ForgetPSViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
             landmarkName = "ForgetPSViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -667,8 +559,8 @@
             filePath = "DAM/ForgetPSViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "ForgetPSViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -998,8 +890,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "Login(_:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "494F45A1-915B-40B0-9F9B-428BF426AB73 - 5ab37eaaf90f542e"
@@ -1061,8 +953,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "Login(_:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "5EE34B95-07B9-437B-8D7C-5CA101E8B6A2 - 5ab37eaaf90f5451"
@@ -1413,8 +1305,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "togglePasswordVisibility()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1541,8 +1433,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "sendSignupRequest(parameters:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1557,8 +1449,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "sendSignupRequest(parameters:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1589,8 +1481,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "togglePasswordVisibility()"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1605,8 +1497,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "sendSignupRequest(parameters:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2325,8 +2217,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "97"
             endingLineNumber = "97"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "handleResponse(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2341,8 +2233,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
             endingLineNumber = "96"
-            landmarkName = "LoginViewController"
-            landmarkType = "3">
+            landmarkName = "handleResponse(data:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2357,7 +2249,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "95"
             endingLineNumber = "95"
-            landmarkName = "sendSignupRequest(parameters:)"
+            landmarkName = "handleResponse(data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2837,8 +2729,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "93"
             endingLineNumber = "93"
-            landmarkName = "sendSignupRequest(parameters:)"
-            landmarkType = "7">
+            landmarkName = "LoginViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2853,7 +2745,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "94"
             endingLineNumber = "94"
-            landmarkName = "sendSignupRequest(parameters:)"
+            landmarkName = "handleResponse(data:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

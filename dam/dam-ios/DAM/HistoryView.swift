@@ -13,7 +13,7 @@ class HistoryViewModel: ObservableObject {
             return
         }
 
-        guard let url = URL(string: "http://192.168.196.54:3001/history") else {
+        guard let url = URL(string: "http://172.18.1.47:3001/history") else {
             print("URL invalide.")
             return
         }

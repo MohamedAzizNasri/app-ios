@@ -56,7 +56,7 @@ struct ContentView: View {
  return
  }
  
- guard let url = URL(string: "http://192.168.196.54:3001/profile/gems") else { return }
+ guard let url = URL(string: "http://172.18.1.47:3001/profile/gems") else { return }
  
  var request = URLRequest(url: url)
  request.httpMethod = "GET"
@@ -111,7 +111,7 @@ struct ContentView: View {
  ]
  
  // Effectuer la requête POST à votre backend
- guard let url = URL(string: "http://192.168.196.54:3001/history") else { return }
+ guard let url = URL(string: "http://172.18.1.47:3001/history") else { return }
  
  var request = URLRequest(url: url)
  request.httpMethod = "POST"
@@ -196,7 +196,7 @@ struct ContentView: View {
  
  // Décrémenter les gems
  let newGemCount = self.parent.gemCount - 1
- let url = URL(string: "http://192.168.196.54:3001/profile/gems")!
+ let url = URL(string: "http://172.18.1.47:3001/profile/gems")!
  var request = URLRequest(url: url)
  request.httpMethod = "PUT"
  request.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")

@@ -88,7 +88,7 @@ class SignupViewController: UIViewController {
 
           // MARK: - Network Methods
           private func sendSignupRequest(parameters: [String: Any]) {
-              guard let url = URL(string: "http://192.168.196.54:3001/auth/signup") else { return }
+              guard let url = URL(string: "http://172.18.1.47:3001/auth/signup") else { return }
 
               do {
                   let jsonData = try JSONSerialization.data(withJSONObject: parameters, options: [])
